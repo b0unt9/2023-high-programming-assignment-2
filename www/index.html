@@ -1,259 +1,288 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <title>부산 소개 앱</title>
 
     <link
-      rel="stylesheet"
-      href="assets/vendor/jquery.mobile/jquery.mobile-1.4.5.min.css"
+            href="assets/vendor/jquery.mobile/jquery.mobile-1.4.5.min.css"
+            rel="stylesheet"
     />
     <script src="assets/vendor/jquery.mobile/jquery-1.11.1.min.js"></script>
     <script src="assets/vendor/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css" rel="stylesheet">
     <style>
-      li {
-        list-style: none;
-      }
-      .picture {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .picture li {
-        float: left;
-        width: 50%;
-      }
-      .picture li a {
-        display: block;
-        margin: 5px;
-        border: 1px;
-      }
-      .picture li img {
-        display: block;
-        width: 50%;
-        height: auto;
-      }
-      .picture li img:hover {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    </style>
-  </head>
+        li {
+            list-style: none;
+        }
 
-  <body>
-    <div data-theme="b">
-      <div data-role="page" id="home">
+        .picture {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .picture li {
+            float: left;
+            width: 50%;
+        }
+
+        .picture li a {
+            display: block;
+            margin: 5px;
+            border: 1px;
+        }
+
+        .picture li img {
+            display: block;
+            width: 50%;
+            height: auto;
+        }
+
+        .picture li img:hover {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div data-theme="b">
+    <div data-role="page" id="home">
         <div data-role="header" data-theme="b">
-          <h1>부산 소개 앱</h1>
+            <h1>부산 소개 앱</h1>
         </div>
         <div data-role="content" style="text-align: center">
-          <img src="assets/images/ci_sign01.png" />
-          <ul data-role="listview" data-inset="true">
-            <li><a href="#intro">부산소개</a></li>
-            <li><a href="#movie" data-rel="dialog">부산영상</a></li>
-            <li><a href="#wizard3-1" data-rel="dialog">부산음악</a></li>
-            <li><a href="#gallery">부산사진</a></li>
-          </ul>
+            <img src="assets/images/ci_sign01.png"/>
+            <ul data-inset="true" data-role="listview">
+                <li><a href="#intro">부산소개</a></li>
+                <li><a data-rel="dialog" href="#movie">부산영상</a></li>
+                <li><a data-rel="dialog" href="#wizard3-1">부산음악</a></li>
+                <li><a href="#gallery">부산사진</a></li>
+                <li><a data-rel="dialog" href="#weather">부산기온</a></li>
+                <li><a data-rel="dialog" href="#poeple">지역별인구</a></li>
+            </ul>
         </div>
-        <div data-role="footer" data-position="fixed" data-theme="b">
-          <h1>부산사랑_홍길동</h1>
+        <div data-position="fixed" data-role="footer" data-theme="b">
+            <h1>부산사랑_김상현</h1>
         </div>
-      </div>
+    </div>
 
-      <div data-role="page" id="intro" data-theme="b">
+    <div data-role="page" data-theme="b" id="intro">
         <div data-role="header" data-theme="b">
-          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
-          <h1>부산 소개</h1>
+            <a data-direction="reverse" data-icon="arrow-l" href="#home">처음</a>
+            <h1>부산 소개</h1>
         </div>
         <div data-role="content">
-          <div style="text-align: center">
-            <img src="assets/images/ci_bubi02.gif" />
-          </div>
-          <div
-            data-role="collapsible-set"
-            data-theme="b"
-            data-content-theme="e"
-          >
-            <div data-role="collapsible" data-collapsed="false">
-              <h3>부산역사</h3>
-              <p>
-                부산이란 이름이 언제부터 사용되었는지 정확한 시기는 알 수 없으나
-                1402년(태종 2) 1월 28일 『태종실록』에 富山이라는 명칭이 처음
-                보이며, 『경상도지리지(1425)』 『세종실록지리지(1454)』
-                『경상도속찬지리지(1469)』 등에 "동래부산포(東萊富山浦)"라
-                하였고... 생략
-              </p>
+            <div style="text-align: center">
+                <img src="assets/images/ci_bubi02.gif"/>
             </div>
-            <div data-role="collapsible">
-              <h3>부산지리</h3>
-              <p>
-                부산은 한반도의 남동단에 자리잡고 있고, 바다에 면한 남쪽을
-                제외하고는 경상남도와 접하고 있으며, 남으로는 대한해협에 면해
-                있고, 북으로는 울산광역시와 양산시의 동면과 물금읍, 서로는
-                김해시의 대동면과 경계를 이루고 있다. ...생략
-              </p>
+            <div
+                    data-content-theme="e"
+                    data-role="collapsible-set"
+                    data-theme="b"
+            >
+                <div data-collapsed="false" data-role="collapsible">
+                    <h3>부산역사</h3>
+                    <p>
+                        부산이란 이름이 언제부터 사용되었는지 정확한 시기는 알 수 없으나
+                        1402년(태종 2) 1월 28일 『태종실록』에 富山이라는 명칭이 처음
+                        보이며, 『경상도지리지(1425)』 『세종실록지리지(1454)』
+                        『경상도속찬지리지(1469)』 등에 "동래부산포(東萊富山浦)"라
+                        하였고... 생략
+                    </p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>부산지리</h3>
+                    <p>
+                        부산은 한반도의 남동단에 자리잡고 있고, 바다에 면한 남쪽을
+                        제외하고는 경상남도와 접하고 있으며, 남으로는 대한해협에 면해
+                        있고, 북으로는 울산광역시와 양산시의 동면과 물금읍, 서로는
+                        김해시의 대동면과 경계를 이루고 있다. ...생략
+                    </p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>부산생활</h3>
+                    <p>
+                        부산은 1876년 근대 국제항으로 개항과 함께 우리나라의 무역·상공업
+                        중심지로서 발전하면서, 1914년 4월 부제(府制)를 실시했을 당시
+                        인구는 20,000명을 조금 넘었으나, 시역(市域)의 확장과 항만의
+                        발달로 점차 증가하여 1925년에는 116,853명으로 불어났다. 이후
+                        일제의 대륙침략을 위한 관문으로서 무역량이 증가하고, 1936년과
+                        1942년 시역확장으로 도시의 발달이 촉진됨에 따라 인구는 1942년에
+                        334,318명으로 증가되었다가, 광복이후 1945년에는 281,160명으로
+                        일본인이 물러감에 따라 일시 줄어들기도 했다. ...생략
+                    </p>현
+                </div>
             </div>
-            <div data-role="collapsible">
-              <h3>부산생활</h3>
-              <p>
-                부산은 1876년 근대 국제항으로 개항과 함께 우리나라의 무역·상공업
-                중심지로서 발전하면서, 1914년 4월 부제(府制)를 실시했을 당시
-                인구는 20,000명을 조금 넘었으나, 시역(市域)의 확장과 항만의
-                발달로 점차 증가하여 1925년에는 116,853명으로 불어났다. 이후
-                일제의 대륙침략을 위한 관문으로서 무역량이 증가하고, 1936년과
-                1942년 시역확장으로 도시의 발달이 촉진됨에 따라 인구는 1942년에
-                334,318명으로 증가되었다가, 광복이후 1945년에는 281,160명으로
-                일본인이 물러감에 따라 일시 줄어들기도 했다. ...생략
-              </p>
-            </div>
-          </div>
         </div>
-        <div data-role="footer" data-position="fixed" data-theme="b">
-          <h1>부산사랑_홍길동</h1>
+        <div data-position="fixed" data-role="footer" data-theme="b">
+            <h1>부산사랑_김상현</h1>
         </div>
-      </div>
+    </div>
 
-      <div data-role="page" id="movie" data-theme="b">
-        <div data-role="header" data-position="fixed" data-theme="b">
-          <h1>부산 영상</h1>
+    <div data-role="page" data-theme="b" id="movie">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <h1>부산 영상</h1>
         </div>
         <div data-role="content">
-          <div class="ui-bar ui-bar-e">부산 소개 동영상</div>
-          <br />
-          <li>
-            <iframe
-              width="100%"
-              height="240"
-              src="https://www.youtube.com/embed/vCeUxVZdE4Y"
-            ></iframe>
-          </li>
-          <br />
-          <div class="ui-bar ui-bar-e">부산시 세대소통 프로젝트 동영상</div>
-          <br />
-          <li>
-            <iframe
-              width="100%"
-              height="240"
-              src="https://www.youtube.com/embed/c9ejd6aClPE"
-            ></iframe>
-          </li>
+            <div class="ui-bar ui-bar-e">부산 소개 동영상</div>
+            <br/>
+            <li>
+                <iframe
+                        height="240"
+                        src="https://www.youtube.com/embed/vCeUxVZdE4Y"
+                        width="100%"
+                ></iframe>
+            </li>
+            <br/>
+            <div class="ui-bar ui-bar-e">부산시 세대소통 프로젝트 동영상</div>
+            <br/>
+            <li>
+                <iframe
+                        height="240"
+                        src="https://www.youtube.com/embed/c9ejd6aClPE"
+                        width="100%"
+                ></iframe>
+            </li>
         </div>
         <div data-role="footer" data-theme="b"></div>
-      </div>
-
-      <div data-role="page" id="wizard3-1">
-        <div data-role="header">
-          <h1>부산 노래1</h1>
-        </div>
-        <div data-role="content">
-          <div class="ui-bar ui-bar-e">부산 찬가</div>
-          <br />
-          <audio controls width="100%" preload="metadata">
-            <source src="assets/audio/hamony.mp3" type="audio/mp3" />
-          </audio>
-          <img src="assets/images/sub0312_img01.gif" alt="" width="100%" />
-        </div>
-        <div data-role="footer">
-          <a href="#home" data-direction="reverse">이전</a>
-          <a href="#wizard3-2" data-rel="dialog" data-transition="slide"
-            >다음</a
-          >
-        </div>
-      </div>
-
-      <div data-role="page" id="wizard3-2">
-        <div data-role="header">
-          <h1>부산 노래2</h1>
-        </div>
-        <div data-role="content">
-          <div class="ui-bar ui-bar-e">부산과 함께 춤을</div>
-          <br />
-          <audio controls width="100%" preload="metadata">
-            <source src="assets/audio/qM1wnFzWGfg.webm" type="audio/mp3" />
-          </audio>
-          <img src="assets/images/qM1wnFzWGfg.jpg" alt="" width="100%" />
-        </div>
-        <div data-role="footer">
-          <a href="#wizard3-1" data-direction="reverse">이전</a>
-          <a href="#home">처음</a>
-        </div>
-      </div>
-
-      <div data-role="page" id="gallery" data-theme="b">
-        <div data-role="header" data-position="fixed" data-theme="b">
-          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
-          <h1>부산 갤러리</h1>
-        </div>
-        <div data-role="content">
-          <ul class="picture">
-            <li>
-              <a href="assets/images/1.jpg" rel="external"
-                ><img src="assets/images/1.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/2.jpg" rel="external"
-                ><img src="assets/images/2.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/3.jpg" rel="external"
-                ><img src="assets/images/3.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/4.jpg" rel="external"
-                ><img src="assets/images/4.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/5.jpg" rel="external"
-                ><img src="assets/images/5.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/6.jpg" rel="external"
-                ><img src="assets/images/6.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/7.jpg" rel="external"
-                ><img src="assets/images/7.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/8.jpg" rel="external"
-                ><img src="assets/images/8.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/9.jpg" rel="external"
-                ><img src="assets/images/9.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/10.jpg" rel="external"
-                ><img src="assets/images/10.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/11.jpg" rel="external"
-                ><img src="assets/images/11.jpg"
-              /></a>
-            </li>
-            <li>
-              <a href="assets/images/12.jpg" rel="external"
-                ><img src="assets/images/12.jpg"
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <div data-role="footer" data-position="fixed" data-theme="b">
-          <h1>부산사랑_홍길동</h1>
-        </div>
-      </div>
     </div>
-  </body>
+
+    <div data-role="page" id="wizard3-1">
+        <div data-role="header">
+            <h1>부산 노래1</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-e">부산 찬가</div>
+            <br/>
+            <audio controls preload="metadata" width="100%">
+                <source src="assets/audio/hamony.mp3" type="audio/mp3"/>
+            </audio>
+            <img alt="" src="assets/images/sub0312_img01.gif" width="100%"/>
+        </div>
+        <div data-role="footer">
+            <a data-direction="reverse" href="#home">이전</a>
+            <a data-rel="dialog" data-transition="slide" href="#wizard3-2"
+            >다음</a
+            >
+        </div>
+    </div>
+
+    <div data-role="page" id="wizard3-2">
+        <div data-role="header">
+            <h1>부산 노래2</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-e">부산과 함께 춤을</div>
+            <br/>
+            <audio controls preload="metadata" width="100%">
+                <source src="assets/audio/qM1wnFzWGfg.webm" type="audio/mp3"/>
+            </audio>
+            <img alt="" src="assets/images/qM1wnFzWGfg.jpg" width="100%"/>
+        </div>
+        <div data-role="footer">
+            <a data-direction="reverse" href="#wizard3-1">이전</a>
+            <a href="#home">처음</a>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="gallery">
+        <div data-position="fixed" data-role="header" data-theme="b">
+            <a data-direction="reverse" data-icon="arrow-l" href="#home">처음</a>
+            <h1>부산 갤러리</h1>
+        </div>
+        <div data-role="content">
+            <ul class="picture">
+                <li>
+                    <a href="assets/images/1.jpg" rel="external"
+                    ><img src="assets/images/1.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/2.jpg" rel="external"
+                    ><img src="assets/images/2.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/3.jpg" rel="external"
+                    ><img src="assets/images/3.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/4.jpg" rel="external"
+                    ><img src="assets/images/4.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/5.jpg" rel="external"
+                    ><img src="assets/images/5.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/6.jpg" rel="external"
+                    ><img src="assets/images/6.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/7.jpg" rel="external"
+                    ><img src="assets/images/7.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/8.jpg" rel="external"
+                    ><img src="assets/images/8.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/9.jpg" rel="external"
+                    ><img src="assets/images/9.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/10.jpg" rel="external"
+                    ><img src="assets/images/10.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/11.jpg" rel="external"
+                    ><img src="assets/images/11.jpg"
+                    /></a>
+                </li>
+                <li>
+                    <a href="assets/images/12.jpg" rel="external"
+                    ><img src="assets/images/12.jpg"
+                    /></a>
+                </li>
+            </ul>
+        </div>
+        <div data-position="fixed" data-role="footer" data-theme="b">
+            <h1>부산사랑_김상현</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="weather">
+        <div data-role="header">
+            <h1>부산기온</h1>
+        </div>
+        <div data-role="content">
+            <h1 id="temperature"></h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="poeple">
+        <div data-role="header">
+            <h1>지역별인구</h1>
+        </div>
+        <div data-role="content">
+            <table class="charts-css bar show-labels show-primary-axis show-data-axes" id="my-chart">
+                <tbody id="chartBody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script src="assets/script.js"></script>
 </html>

@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="one.ksh.busan" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>BusanApp</name>
     <description>Sample Apache Cordova App</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
@@ -8,5 +12,18 @@
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <splash density="land-hdpi" src="res/screen/splash.jpg" />
+    <splash density="land-ldpi" src="res/screen/splash.jpg" />
+    <splash density="land-mdpi" src="res/screen/splash.jpg" />
+    <splash density="land-xhdpi" src="res/screen/splash.jpg" />
+    <splash density="land-xxhdpi" src="res/screen/splash.jpg" />
+    <splash density="land-xxxhdpi" src="res/screen/splash.jpg" />
+    <splash density="port-hdpi" src="res/screen/splash.jpg" />
+    <splash density="port-ldpi" src="res/screen/splash.jpg" />
+    <splash density="port-mdpi" src="res/screen/splash.jpg" />
+    <splash density="port-xhdpi" src="res/screen/splash.jpg" />
+    <splash density="port-xxhdpi" src="res/screen/splash.jpg" />
+    <splash density="port-xxxhdpi" src="res/screen/splash.jpg" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreenDelay" value="3000" />
 </widget>
